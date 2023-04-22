@@ -8,11 +8,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
+import { UpdateEmpComponent } from './update-emp/update-emp.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoutes : Routes
 =[
   {
     path:"",component:SearchEmployeeComponent
+  },
+  {
+    path:"updateemp",component:UpdateEmpComponent
   }
 ]
 
@@ -20,7 +25,9 @@ const myRoutes : Routes
 @NgModule({
   declarations: [
     AppComponent,
-    SearchEmployeeComponent
+    SearchEmployeeComponent,
+    UpdateEmpComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

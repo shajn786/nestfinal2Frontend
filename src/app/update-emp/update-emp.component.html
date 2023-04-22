@@ -5,11 +5,11 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
                <div class="col col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                   <h1 style="color:brown">Search Employee</h1>
+                   <h1 style="color:brown">Update Employee</h1>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                   <label for="" class="form-label">Search Employee</label>
-                   <input type="text" name="employeeCode" [(ngModel)]="employeeCode" id="" class="form-control">
+                   <label for="" class="form-label">Update Employee</label>
+                   <input type="text" name="employeeCode" [(ngModel)]="employeeCode1" id="" class="form-control">
                     
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -22,15 +22,17 @@
                         <div class="card" style="width: 18rem;">
                             <img src="https://png.pngtree.com/png-vector/20220901/ourmid/pngtree-male-company-employee-avatar-icon-wearing-a-necktie-png-image_6133877.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Employee Code : {{j.employeeCode}} </h5>
-                              <p class="card-text">Employee Name : {{j.employeeName}}</p>
+                              <input type="text" name="employeeCode" [(ngModel)]="j.employeeCode" value="{{j.employeeCode}}" id="" class="form-control">
+                              <input type="text" name="employeeName"  [(ngModel)]="j.employeeName"  value ="{{j.employeeName}}" id="" class="form-control">
+                              <input type="text" name="designation"   [(ngModel)]="j.designation" id="" class="form-control">
+
                             </div>
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Designation : {{j.designation}}</li>
+                          
                               
                              
                             </ul>
-                           <button (click)="delete(j.employeeCode)"  class="btn btn-danger">Delete</button>
+                           <button (click)="update(j.id,j.employeeCode,j.employeeName,j.designation)"  class="btn btn-danger">Update</button>
                           </div>
     
                     </div>
